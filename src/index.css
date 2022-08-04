@@ -20,6 +20,10 @@ font-family: 'Montserrat', sans-serif;
   margin: 0;
 }
 
+img{
+  width: 210px;
+}
+
 /*Navbar style*/
 
 .navbar{

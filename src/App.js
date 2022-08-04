@@ -13,9 +13,13 @@ import {Navbar} from './components/Navbar'
 import { Error } from './pages/Error';
 import './App.css';
 
-// https://api.tvmaze.com/search/shows?q=boys
+
 function App() {
-  const [movies, updateMovies] = useState([])
+  
+
+
+
+  
   return (
     <>
     <Navbar />
