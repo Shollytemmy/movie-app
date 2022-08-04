@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-export const ListItem = ({movies}) => {
+export const ListItem = ({movies, id}) => {
   console.log(movies)
   return (
     <div className='movie'>
-      <Link to='/' className='movie__list'>
+      <Link to={`/movieInfo/${id}`} className='movie__list'>
         {
           movies.map((movie) => {
             return(
