@@ -17,7 +17,7 @@ export const Searchbar = ({searchQuery, updateSearchQuery, handleSearch, movies}
         </div>
         <button className='cta' onClick={() =>handleSearch(searchQuery)}>Search</button>
 
-        <ListItem movies = {movies} />
+        
         
     </div>
   )

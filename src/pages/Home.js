@@ -5,6 +5,7 @@ import axios from 'axios'
 //page
 
 import { Searchbar } from '../components/Searchbar'
+import { ListItem } from '../components/ListItem'
 
 // https://api.tvmaze.com/search/shows?q=boys
 
@@ -32,13 +33,40 @@ export const Home = () => {
 
   
   return (
-    <div>
+    <>
       <Searchbar
        searchQuery = {searchQuery}
         updateSearchQuery = {updateSearchQuery} 
         handleSearch = {handleSearch}
         movies = {movies}
          />
-    </div>
+         <div className='movie__list'>
+          {
+          movies.map((movie) => {
+            return(
+              <div className='movie__list'>
+                <ListItem 
+                key={movie.show.id}
+                image = {movie.show.image ? movie.show.image.medium : "https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=2000"}
+
+                name = {movie.show.name}
+                rating = {movie.show.rating.average ? movie.show.rating.average : 'No rating'}
+                id = {movie.show.id}
+                
+                
+                />
+
+                
+
+
+              </div>
+            )
+          })
+        }
+
+         </div>
+
+         
+    </>
   )
 }

@@ -13,15 +13,19 @@
 
 body{
 font-family: 'Montserrat', sans-serif;
+box-sizing: border-box;
 }
 
 .container{
   max-width: 1170px;
   margin: 0;
+  
 }
 
 img{
   width: 210px;
+  height: 295px;
+  object-fit: cover;
 }
 
 /*Navbar style*/
@@ -107,4 +111,54 @@ ul{
   font-size: 18px;
   font-weight: bold;
   border-radius: 5px;
+}
+
+/*Movie list style*/
+
+.movie{
+  border: 0px solid red;
+  margin: 1rem;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* padding: 15px 10px; */
+  
+  
+}
+
+
+.movie__list{
+  display: flex;
+  border: 0px solid red;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.detail{
+  padding: 0.6rem 0;
+  text-align: center;
+  color: var(--teal);
+}
+
+.movie > a{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*Movies__info*/
+
+.movieInfo{
+  display: flex;
+  /* align-items: center; */
+  margin: 3rem auto;
+  width: 50%;
+  border: 0px solid red;
+}
+
+.movieInfo__detail{
+  margin-left: 0.5rem;
+}
+
+.detail__list{
+  list-style: none;
 }
