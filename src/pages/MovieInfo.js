@@ -19,6 +19,15 @@ export const MovieInfo = () => {
       
     }
   }
+  // function to remove html tags around text
+  function removeTags(str) {
+    if ((str===null) || (str===''))
+        return false;
+    else
+        str = str.toString();
+          
+    return str.replace( /(<([^>]+)>)/ig, '');
+}
 
   useEffect(() => {
       getSingleMovie()
@@ -36,7 +45,7 @@ export const MovieInfo = () => {
         <p className="detail__language">
          <strong>Language: </strong> {movieInfo.language}
         </p>
-        <p className="detail__name">
+        <p className="detail__rating">
          <strong>Rating: </strong> {movieInfo.rating ? movieInfo.rating.average : "No rating"}
         </p>
 
@@ -50,6 +59,10 @@ export const MovieInfo = () => {
 
         <p className="detail__name">
          <strong>Url: </strong> <a href={movieInfo.url ? movieInfo.url : "No url"} target="_blank" rel="noopener noreferrer">{movieInfo.url}</a>
+        </p>
+
+        <p className="detail__summary">
+         <strong>Summary: </strong> {movieInfo.summary ? removeTags(movieInfo.summary) : 'No summary'}
         </p>
 
       </div>

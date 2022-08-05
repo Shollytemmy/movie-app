@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 
@@ -42,11 +41,11 @@ export const Home = () => {
          />
          <div className='movie__list'>
           {
-          movies.map((movie) => {
+          movies.map((movie, i) => {
             return(
-              <div className='movie__list'>
+              <div className='movie__list' key={movie.show.id}>
                 <ListItem 
-                key={movie.show.id}
+                
                 image = {movie.show.image ? movie.show.image.medium : "https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=2000"}
 
                 name = {movie.show.name}

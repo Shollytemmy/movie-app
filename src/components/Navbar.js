@@ -22,6 +22,9 @@ export const Navbar = () => {
                     <li className='links__link'>
                         <Link to='/about' >About</Link>
                     </li>
+                    <li className='links__link'>
+                        <Link to='/favourite' >Favourite</Link>
+                    </li>
                 </ul>
 
             </nav>

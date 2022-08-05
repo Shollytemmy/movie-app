@@ -162,3 +162,7 @@ ul{
 .detail__list{
   list-style: none;
 }
+
+p{
+  margin: 0.5rem;
+}
