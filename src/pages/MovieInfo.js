@@ -2,7 +2,9 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-export const MovieInfo = () => {
+
+
+export const MovieInfo = ({addFavourite}) => {
   const [movieInfo, updateMovieInfo] = useState({})
   console.log('state',movieInfo)
   const {id} = useParams()
@@ -33,9 +35,14 @@ export const MovieInfo = () => {
       getSingleMovie()
       //eslint-disable-next-line
     }, [])
+
+    // useEffect(() =>{
+    //   addFavourite(movieInfo)
+      
+    // }, [])
   return (
     <div className='movieInfo'>
-      <img src={movieInfo.image ? movieInfo.image.medium : "https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=2000"} alt={movieInfo.name} />
+      <img src={movieInfo.image ? movieInfo.image.medium : "https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=2000"} alt={movieInfo.name} /> 
 
       <div className="movieInfo__detail">
         <p className="detail__name">
